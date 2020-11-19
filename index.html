@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="js.js"></script>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      place-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 600px;
+      height: 600px;
+      border: 1px solid blue;
+      display: grid;
+      place-content: center;
+    }
+
+    .box {
+      width: 170px;
+      height: 170px;
+      position: absolute;
+      left: calc(50% - 85px);
+      top: calc(50% - 85px);
+      box-shadow: 1px 2px 6px black;
+      transition: all 0.3s ease;
+      font-size: 3em;
+      display: grid;
+      place-content: center;
+    }
+
+    .r {
+      background: rgb(214, 90, 90);
+    }
+
+    .b {
+      background: rgb(43, 128, 207);
+    }
+
+    .g {
+      background: rgb(92, 87, 87);
+    }
+
+    .p1 {
+      transform: translateY(-50px);
+      z-index: 2;
+    }
+
+    .p2 {
+      transform: translateY(50px) translateX(-90px);
+      z-index: 1;
+    }
+
+    .p3 {
+      transform: translateY(50px) translateX(90px);
+      z-index: 1;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div id="1" class="box r">1</div>
+      <div id="2" class="box b">2</div>
+      <div id="3" class="box g">3</div>
+    </div>
+  </body>
+</html>
